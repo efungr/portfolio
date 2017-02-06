@@ -87,16 +87,16 @@ section,
             background-size: cover !important;
             height: 100%;
             &.se-next {
-                background: url(../img/se-hero.jpg) no-repeat center center !important;
+                background: url(../img/se-hero.jpg) no-repeat center center;
             }            
             &.stg-next {
-                background: url(../img/stg-hero.jpg) no-repeat center center !important;
+                background: url(../img/stg-hero.jpg) no-repeat center center;
             }            
             &.ss-next {
-                background: url(../img/ss-hero.jpg) no-repeat center center !important;
+                background: url(../img/ss-hero.jpg) no-repeat center center;
             }            
             &.gs-next {
-                background: url(../img/gs-hero.jpg) no-repeat center center !important;
+                background: url(../img/gs-hero.jpg) no-repeat center center;
             }
         }
         a {
