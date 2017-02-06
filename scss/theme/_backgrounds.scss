@@ -1,0 +1,65 @@
+/* =======================================================================
+    Backgrounds
+======================================================================== */
+
+.bg-white {
+    background: $white;
+}
+.bg-light-gray {
+    background: $light-gray;
+}
+.bg-dark-gray {
+    background: $dark-gray;
+}
+.bg-black {
+    background: $black;
+}
+.bg-primary {
+    background: $primary-color;
+}
+.bg-secondary {
+    background: $secondary-color;
+}
+.bg-success {
+    background: $success-color;
+}
+.bg-warning {
+    background: $warning-color;
+}
+.bg-alert {
+    background: $alert-color;
+}
+.bg-se {
+    background: $se-color;
+}
+.bg-stg {
+    background: $stg-color;
+}
+.bg-ss {
+    background: $ss-color;
+}
+
+.bg-gradient {
+    background: linear-gradient(228deg, $success-color, $primary-color, $primary-color);
+    background-size: 600% 600%;
+
+    -webkit-animation: PrimarySecondaryGradient 15s ease infinite;
+    -moz-animation: PrimarySecondaryGradient 15s ease infinite;
+    animation: PrimarySecondaryGradient 15s ease infinite;
+
+    @-webkit-keyframes PrimarySecondaryGradient {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 51%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes PrimarySecondaryGradient {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 51%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes PrimarySecondaryGradient {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 51%}
+        100%{background-position:0% 50%}
+    }
+}

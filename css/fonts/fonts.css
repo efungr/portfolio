@@ -1,0 +1,31 @@
+/*////////////////////////////////////////////////////////
+//  Fonts
+////////////////////////////////////////////////////////*/
+
+@font-face {
+font-family: 'VisbyCF';
+  src: url('VisbyCF-Light.woff2') format('woff2'),
+       url('VisbyCF-Light.woff') format('woff'),
+       url('VisbyCF-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+font-family: 'VisbyCF';
+  src: url('VisbyCF-Regular.woff2') format('woff2'),
+       url('VisbyCF-Regular.woff') format('woff'),
+       url('VisbyCF-Regular.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'VisbyCF';
+  src: url('VisbyCF-DemiBold.woff2') format('woff2'),
+       url('VisbyCF-DemiBold.woff') format('woff'),
+       url('VisbyCF-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+font-family: 'QuincyCF';
+  src: url('QuincyCF-Text.woff2') format('woff2'),
+       url('QuincyCF-Text.woff') format('woff');
+  font-weight: 500;
+}

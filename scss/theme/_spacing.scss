@@ -1,0 +1,32 @@
+/* =======================================================================
+    Spacing
+======================================================================== */
+
+.section-none {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.section-small {
+    padding-top: rem-calc(50px);
+    padding-bottom: rem-calc(50px);
+}
+.section-normal {
+    padding-top: rem-calc(50px);
+    padding-bottom: rem-calc(50px);
+    @include breakpoint(medium) {
+        padding-top: rem-calc(100px);
+        padding-bottom: rem-calc(100px);
+    }
+}
+.section-large {
+    padding-top: rem-calc(50px);
+    padding-bottom: rem-calc(50px);
+    @include breakpoint(medium){
+        padding-top: rem-calc(150px);
+        padding-bottom: rem-calc(150px);
+    }
+}
+.section-xl {
+    padding-top: rem-calc(200px);
+    padding-bottom: rem-calc(200px);
+}

@@ -1,0 +1,160 @@
+/* =======================================================================
+    Buttons
+======================================================================== */
+
+.button {
+    text-transform: uppercase;
+    font-weight: 600;
+    &.large {
+        font-size: rem-calc(24px);
+        @include breakpoint(medium) {
+            font-size: rem-calc(36px);
+        }
+    }
+    &.white {
+        background-color: $white;
+    }
+    &.black {
+        background-color: $black;
+    }    
+    &.primary {
+        background-color: $primary-color;
+    }    
+    &.secondary {
+        background-color: $secondary-color;
+    }    
+    &.success {
+        background-color: $success-color;
+    }   
+    &.warning {
+        background-color: $warning-color;
+    }    
+    &.alert {
+        background-color: $alert-color;
+    }    
+    &.light-gray {
+        background-color: $light-gray;
+    }      
+    &.medium-gray {
+        background-color: $medium-gray;
+    }      
+    &.dark-gray {
+        background-color: $dark-gray;
+    }      
+    &.se {
+        background-color: $se-color;
+    }      
+    &.stg {
+        background-color: $stg-color;
+    }      
+    &.ss {
+        background-color: $ss-color;
+    }
+    &.hollow {
+        background-color: transparent;
+         &.white {
+            color: $white;
+            border-color: $white;
+            &:hover {
+                background-color: $white;
+                color: $dark-gray;
+            }
+        }
+        &.black {
+            color: $black;
+            border-color: $black;
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }    
+        &.primary {
+            color: $primary-color;
+            border-color: $primary-color;
+            &:hover {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }    
+        &.secondary {
+            color: $secondary-color;
+            border-color: $secondary-color;
+            &:hover {
+                background-color: $secondary-color;
+                color: $white;
+            }
+        }    
+        &.success {
+            color: $success-color;
+            border-color: $success-color;
+            &:hover {
+                background-color: $success-color;
+                color: $white;
+            }
+        }   
+        &.warning {
+            color: $warning-color;
+            border-color: $warning-color;
+            &:hover {
+                background-color: $warning-color;
+                color: $white;
+            }
+        }    
+        &.alert {
+            color: $alert-color;
+            border-color: $alert-color;
+            &:hover {
+                background-color: $alert-color;
+                color: $dark-gray;
+            }
+        }    
+        &.light-gray {
+            color: $light-gray;
+            border-color: $light-gray;
+            &:hover {
+                background-color: $light-gray;
+                color: $dark-gray;
+            }
+        }      
+        &.medium-gray {
+            color: $medium-gray;
+            border-color: $medium-gray;
+            &:hover {
+                background-color: $medium-gray;
+                color: $dark-gray;
+            }
+        }      
+        &.dark-gray {
+            color: $dark-gray;
+            border-color: $dark-gray;
+            &:hover {
+                background-color: $dark-gray;
+                color: $white;
+            }
+        }      
+        &.se {
+            color: $se-color;
+            border-color: $se-color;
+            &:hover {
+                background-color: $se-color;
+                color: $white;
+            }
+        }      
+        &.stg {
+            color: $stg-color;
+            border-color: $stg-color;
+            &:hover {
+                background-color: $stg-color;
+                color: $dark-gray;
+            }
+        }      
+        &.ss {
+            color: $ss-color;
+            border-color: $ss-color;
+            &:hover {
+                background-color: $ss-color;
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+/* =======================================================================
+    Header
+======================================================================== */
+
+header {
+    height: rem-calc(85px);
+    @include breakpoint(medium) {
+        height: rem-calc(185px);    
+    }
+    .ui-overlay {
+        .sub-number {
+            position: fixed;
+            top: rem-calc(20px);
+            left: rem-calc(80px);
+            @include breakpoint(medium) {
+                top: rem-calc(55px);
+                left: rem-calc(185px);
+            }
+        }
+        h1 {
+            font-size: rem-calc(34px);
+            color: $dark-gray;
+            display: block;
+            position: fixed;
+            top: rem-calc(20px);
+            left: rem-calc(80px);
+            z-index: 99;
+            @include breakpoint(medium) {
+                font-size: rem-calc(72px);
+                top: rem-calc(43px);
+                left: rem-calc(180px);
+            }
+        }
+    }
+}

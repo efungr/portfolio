@@ -1,0 +1,150 @@
+/* =======================================================================
+    Main
+======================================================================== */
+
+#main {
+    height: 85vh;
+    @include breakpoint(medium) {
+        height: 100vh;
+    }
+    .row {
+        height: 100%;
+        h2 {
+            font-size: rem-calc(18px);
+            line-height: 1;
+            margin-bottom: 0;
+            @include breakpoint(medium) {
+                font-size: rem-calc(36px);
+            }
+        }
+        h1 {
+            font-size: rem-calc(55px);
+            line-height: 1;
+            @include breakpoint (medium) {
+                font-size: rem-calc(132px);
+                margin-left: rem-calc(-7px);
+            }
+        }
+    }
+}
+
+#about {
+    .row {
+        .no-height {
+            height: 0;
+            .vertical-line {
+                &.white {
+                    background-color: $white;
+                    height: rem-calc(50px);
+                    left: 0;
+                    right: 0;
+                    top: rem-calc(-100px);
+                    @include breakpoint(medium) {
+                        height: rem-calc(115px);
+                        left: rem-calc(-30px);
+                        top: rem-calc(-215px);
+                    }
+                }
+                &.dark-gray {
+                    background-color: $dark-gray;
+                    height: rem-calc(50px);
+                    left: 0;
+                    right: 0;
+                    top: rem-calc(-100px);
+                    @include breakpoint(medium) {
+                        height: rem-calc(500px);
+                        left: rem-calc(-30px);
+                        top: rem-calc(-215px);
+                    }
+                }
+            }
+        }
+    }
+    .row {
+        .columns {
+            .col-wrap {
+                margin: 30px auto;
+                @include breakpoint(medium) {
+                    margin: 0 auto;    
+                }
+                h6 {
+                    top: rem-calc(75px);
+                }
+            }
+        }
+    }
+}
+
+#projects{
+    padding-bottom: 0;
+    .row {
+        @include breakpoint(medium) { 
+            height: rem-calc(560px);
+        }
+        height: auto;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .home-project-text {
+            margin-bottom: rem-calc(30px);
+            width: 100%;
+            flex-basis: auto;
+            margin-top: rem-calc(-45px);
+            @include breakpoint(medium) {
+                margin-bottom: 0;
+            }
+            h6 {
+                top: rem-calc(98px);
+                right: rem-calc(110px);
+            }
+        }
+        .home-project-img {
+            flex-basis: auto;
+            margin-bottom: rem-calc(30px);
+            z-index: 2;
+            width: 100%;
+            @include breakpoint(medium) {
+                @include order(1);
+            }
+            .col-wrap {
+                margin: 0 auto;
+                h6 {
+                    top: rem-calc(55px);
+                }
+            }
+        }
+        .home-project-link {
+            flex-basis: auto;
+            position: relative;
+            margin-bottom: rem-calc(30px);
+            @include breakpoint(medium) {
+                margin-top: rem-calc(120px);
+                margin-bottom: 0;
+            }
+            @include breakpoint(large) {
+                margin-top: rem-calc(180px);
+            }
+        }   
+    }
+}
+
+#contact {
+    background: $primary-color;
+    color: $white;
+    @include breakpoint(large) {
+        padding-top: rem-calc(230px);
+    }
+    .contact-text {
+        margin-bottom: rem-calc(30px);
+    }
+    h6 {
+        top: 97px;
+    }
+    .home-contact-link {
+        margin-top: rem-calc(30px);
+        @include breakpoint(large) {
+            margin-top: rem-calc(130px);
+        }
+    }
+}
