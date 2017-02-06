@@ -80,6 +80,7 @@ p {
 
 a {
     color: $dark-gray;
+    outline: 0;
     &:hover {
         color: inherit;
     }
