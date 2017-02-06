@@ -88,6 +88,7 @@
         left: rem-calc(15px);
         width: rem-calc(55px);
         height: rem-calc(55px);
+        z-index: 101;
         @include breakpoint(medium) {
             width: rem-calc(105px);
             height: rem-calc(105px);
