@@ -6,31 +6,28 @@ $(document).ready(function() {
     
     $( '.overlay-menu' ).click(function() {
         $( '.overlay' ).addClass('overlay-open');
-    });
-    
-    $( '.overlay-close' ).click(function() {
-        $('.menuButton').show();
-        $( '.overlay' ).removeClass('overlay-open');
-        $('.menuButton').removeClass('animated rotateOut');
-        $( '#menuClose' ).addClass('animated rotateOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
-          function() {
-            $('#menuClose').removeClass('animated rotateOut');
-          });
-        $('.menuButton').addClass('animated rotateIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
-          function() {
-            $('.menuButton').removeClass('animated rotateIn');
-          });
-    });
-    
-    $( '.menuButton' ).click(function() {
         $( this ).addClass('animated rotateOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
         function() {
-          $(this).hide();
+          $( 'body' ).find( '.overlay-menu' ).hide();
         });
         $( '#menuClose' ).addClass('animated rotateIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
         function() {
           $( this ).removeClass('animated rotateIn');
         });
+    });
+    
+    $( '.overlay-close' ).click(function() {
+        $('.overlay-menu').show();
+        $( '.overlay' ).removeClass('overlay-open');
+        $('.overlay-menu').removeClass('animated rotateOut');
+        $( '#menuClose' ).addClass('animated rotateOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+          function() {
+            $('#menuClose').removeClass('animated rotateOut');
+          });
+        $('.overlay-menu').addClass('animated rotateIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+          function() {
+            $('.overlay-menu').removeClass('animated rotateIn');
+          });
     });
     
     ////////// Menu Icon Rotation /////////
