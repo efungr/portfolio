@@ -1,6 +1,8 @@
 $(document).foundation();
 
-$(function() {
+$(document).ready(function() {
+    
+    /////////  Menu Overlay  /////////////
     
     $( '.overlay-menu' ).click(function() {
         $( '.overlay' ).addClass('overlay-open');
@@ -10,26 +12,28 @@ $(function() {
         $('.menuButton').show();
         $( '.overlay' ).removeClass('overlay-open');
         $('.menuButton').removeClass('animated rotateOut');
-        $( '#menuClose' ).addClass('animated rotateOut');
-            $('#menuClose').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                $('#menuClose').removeClass('animated rotateOut');
-            });
-        $('.menuButton').addClass('animated rotateIn');
-            $('.menuButton').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                $('.menuButton').removeClass('animated rotateIn');
-            });
+        $( '#menuClose' ).addClass('animated rotateOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+          function() {
+            $('#menuClose').removeClass('animated rotateOut');
+          });
+        $('.menuButton').addClass('animated rotateIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+          function() {
+            $('.menuButton').removeClass('animated rotateIn');
+          });
     });
     
     $( '.menuButton' ).click(function() {
-        $( '.menuButton' ).addClass('animated rotateOut');
-            $('.menuButton').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                $('.menuButton').hide();
-            });
-        $('#menuClose').addClass('animated rotateIn');
-            $('#menuClose').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $('#menuClose').removeClass('animated rotateIn');
-            });
+        $( this ).addClass('animated rotateOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+        function() {
+          $(this).hide();
+        });
+        $( '#menuClose' ).addClass('animated rotateIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+        function() {
+          $( this ).removeClass('animated rotateIn');
+        });
     });
+    
+    ////////// Menu Icon Rotation /////////
     
     $( 'body' ).find( '.menu-holder' ).hover( 
         function() {
@@ -39,34 +43,18 @@ $(function() {
         }
     );
     
-    $( '.footer-home-link' ).hover( 
-        function() {
-        $( '#icoHomeText' ).removeClass('hide fadeOut');
-        $( '#icoHomeText' ).addClass( 'animated fadeIn' );
-        }, function() {
-        $( '#icoHomeText' ).addClass('fadeOut');
-        $( '#icoHomeText' ).removeClass( 'fadeIn' );
-        }
-    );    
-    $( '.footer-back-link' ).hover( 
-        function() {
-        $( '#icoBackText' ).removeClass('hide fadeOut');
-        $( '#icoBackText' ).addClass( 'animated fadeIn' );
-        }, function() {
-        $( '#icoBackText' ).addClass('fadeOut');
-        $( '#icoBackText' ).removeClass( 'fadeIn' );
-        }
-    );    
-    $( '.footer-grid-link' ).hover( 
-        function() {
-        $( '#icoGridText' ).removeClass('hide fadeOut');
-        $( '#icoGridText' ).addClass( 'animated fadeIn' );
-        }, function() {
-        $( '#icoGridText' ).addClass('fadeOut');
-        $( '#icoGridText' ).removeClass( 'fadeIn' );
-        }
+    ///////// Footer Icon Hover /////////
+        
+    $('.hover-icon').hover(
+      function() {
+        $( 'span', this ).removeClass('hide fadeOut').addClass( 'animated fadeIn' );
+      }, function() {
+      $( 'span', this ).addClass('fadeOut').removeClass( 'fadeIn' );
+      }
     );
-    
+
+    //////////  Back to Top ///////////
+ 
     $("#toTop").click(function () {
     $("html, body").animate({scrollTop: 0}, 1000);
     });

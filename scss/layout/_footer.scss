@@ -51,9 +51,7 @@ footer {
                         font-weight: 500;
                     }
                 }
-                .footer-home-link,
-                .footer-back-link,
-                .footer-grid-link {
+                .hover-icon {
                     a {
                         line-height: rem-calc(20px);
                         margin-left: rem-calc(20px);
@@ -71,61 +69,57 @@ footer {
                             top: 50%;
                         }
                     }
-                }
-                .footer-home-link,
-                .footer-grid-link {
-                    padding-left: rem-calc(20px);
-                    justify-content: flex-start;
-                    a {
-                        &:before {
-                            left: rem-calc(15px);
-                            @include breakpoint(xlarge){
-                                left: 0;
+                    &.home,
+                    &.grid {
+                        padding-left: rem-calc(20px);
+                        justify-content: flex-start;
+                        a {
+                            &.icon-home {
+                                &:before {
+                                    background: url(../img/icons/icon-home.svg) no-repeat;
+                                }
                             }
-                        }
-                        span {
-                            left: rem-calc(15px);
-                            @include breakpoint(xlarge){
-                                left: 0;
+                            &.icon-grid {
+                                &:before {
+                                    background: url(../img/icons/icon-grid.svg) no-repeat;
+                                }
                             }
-                            padding-left: rem-calc(35px);
-                        }
-                    }
-                }                  
-                .footer-home-link{
-                    a {
-                        &:before {
-                            background: url(../img/icons/icon-home.svg) no-repeat;
-                        }
-                    }
-                }                
-                .footer-grid-link{
-                    a {
-                        &:before {
-                            background: url(../img/icons/icon-grid.svg) no-repeat;
-                        }
-                    }
-                }                
-                .footer-back-link{
-                    padding-right: rem-calc(20px);
-                    justify-content: flex-end;
-                    a {
-                        &:before {
-                            right: rem-calc(15px);
-                            background: url(../img/icons/icon-arrow.svg) no-repeat;
-                            @include breakpoint(xlarge){
-                                right: 0;
+                            &:before {
+                                left: rem-calc(15px);
+                                @include breakpoint(xlarge){
+                                    left: 0;
+                                }
                             }
-                        }
-                        span {
-                            right: rem-calc(15px);
-                            padding-right: rem-calc(35px);
-                            @include breakpoint(xlarge){
-                                right: 0;
+                            span {
+                                left: rem-calc(15px);
+                                @include breakpoint(xlarge){
+                                    left: 0;
+                                }
+                                padding-left: rem-calc(35px);
                             }
                         }
                     }
-                }
+                    &.back {
+                        padding-right: rem-calc(20px);
+                        justify-content: flex-end;
+                        a {
+                            &:before {
+                                right: rem-calc(15px);
+                                background: url(../img/icons/icon-arrow.svg) no-repeat;
+                                @include breakpoint(xlarge){
+                                    right: 0;
+                                }
+                            }
+                            span {
+                                right: rem-calc(15px);
+                                padding-right: rem-calc(35px);
+                                @include breakpoint(xlarge){
+                                    right: 0;
+                                }
+                            }
+                        }
+                    }
+                }                                            
             }   
         }
     }
