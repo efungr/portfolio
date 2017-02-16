@@ -32,12 +32,12 @@
 //@include foundation-responsive-embed;
 //@include foundation-label;
 //@include foundation-media-object;
-@include foundation-off-canvas;
+//@include foundation-off-canvas;
 //@include foundation-orbit;
 //@include foundation-pagination;
 //@include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
+//@include foundation-progress-element;
+//@include foundation-meter-element;
 //@include foundation-slider;
 //@include foundation-sticky;
 //@include foundation-reveal;
@@ -52,8 +52,8 @@
 @include foundation-float-classes;
 @include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 // Custom partials
 @import './utilities/mixins';
