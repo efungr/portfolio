@@ -60,7 +60,7 @@
             margin: 0 auto;
         }
     }
-    &.ui-overlay-dark {
+    &-dark {
         .menu-holder {
             &:before {
                 background: url(../img/icons/menu-dark.svg) no-repeat;
@@ -68,12 +68,28 @@
             }
         }
     }    
-    &.ui-overlay-white {
+    &-white {
         .menu-holder {
             &:before {
                 background: url(../img/icons/menu-white.svg) no-repeat;
                 background-size: 100%;
             }
+        }
+    }
+}
+
+.hover-spin {
+    img {
+    -webkit-animation: spinAround 7s linear infinite;
+    -moz-animation: spinAround 7s linear infinite;
+    animation: spinAround 7s linear infinite;
+    }
+    @keyframes spinAround {
+        from {
+            transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(360deg);
         }
     }
 }
