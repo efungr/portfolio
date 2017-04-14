@@ -47,6 +47,9 @@
         -webkit-transition-delay: 0s;
         -moz-transition-delay: 0s;
         transition-delay: 0s;
+    }        
+    &:focus {
+        color: initial;
     }
 }
 
